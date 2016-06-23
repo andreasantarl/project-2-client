@@ -27,6 +27,15 @@
           </fieldset>
         </form>
 
+        <form id="create-profile">
+          <fieldset>
+            <legend>Create a user profile</legend>
+            <input type="text" name="first_name" placeholder="First name">
+            <input type="text" name="last_name" placeholder="Last name">
+            <input type="submit" name="submit" value="Create your profile">
+          </fieldset>
+        </form>
+
         <form id="sign-out">
           <fieldset>
             <legend>Sign Out!</legend>
@@ -43,7 +52,18 @@
           </fieldset>
         </form>
       </article>
+
+      <form id="create-workout">
+        <legend>Add a new workout!</legend>
+        <input type="text" name="cardio_desc" placeholder="What did you do?*" required>
+        <input type="date" name="cardio_date" placeholder="Date*" required>
+        <input type="number" name="cardio_duration" placeholder="Duration in minutes">
+        <input type="number" name="cardio_distance" placeholder="Distance in miles">
+        <input type="text" name="cardio_notes" placeholder="Notes">
+        <input type="submit" name="submit" value="Add a workout!">
+      </form>
     <div class="content">
+
 
     </div>
   </body>

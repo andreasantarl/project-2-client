@@ -2,6 +2,8 @@
 
 const app = require('../app.js');
 
+let userId;
+
 const success = (data) => {
   if (data) {
     console.log(data);
@@ -16,7 +18,6 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   app.user = data.user;
-  console.log(app.user);
 };
 
 const signOutSuccess = () => {
@@ -24,9 +25,20 @@ const signOutSuccess = () => {
   app.user = null;
 };
 
+const profileSuccess = (data) => {
+  console.log('Profile created!');
+  app.user = data.user;
+};
+
+const profileFailure = (error) => {
+  console.error(error);
+};
+
 module.exports = {
   success,
   failure,
   signInSuccess,
-  signOutSuccess
+  signOutSuccess,
+  profileSuccess,
+  profileFailure,
 };
