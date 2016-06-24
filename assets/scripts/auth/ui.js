@@ -2,7 +2,7 @@
 
 const app = require('../app.js');
 
-let userId;
+// let userId;
 
 const success = (data) => {
   if (data) {
@@ -25,20 +25,20 @@ const signOutSuccess = () => {
   app.user = null;
 };
 
-const profileSuccess = (data) => {
-  console.log('Profile created!');
-  app.user = data.user;
-};
-
-const profileFailure = (error) => {
-  console.error(error);
-};
+// const profileSuccess = (data) => {
+//   console.log('Profile created!');
+//   app.user = data.user;
+// };
+//
+// const profileFailure = (error) => {
+//   console.error(error);
+// };
 
 module.exports = {
   success,
   failure,
   signInSuccess,
   signOutSuccess,
-  profileSuccess,
-  profileFailure,
+  // profileSuccess,
+  // profileFailure,
 };

@@ -36,20 +36,20 @@ const onChangePassword = (event) => {
   .fail(ui.failure);
 };
 
-const onCreateProfile = (event) => {
-  event.preventDefault();
-  let data = getFormFields(event.target);
-  api.setProfile(data)
-  .done(ui.profileSuccess)
-  .fail(ui.profileFailure);
-};
+// const onCreateProfile = (event) => {
+//   event.preventDefault();
+//   let data = getFormFields(event.target);
+//   api.setProfile(data)
+//   .done(ui.profileSuccess)
+//   .fail(ui.profileFailure);
+// };
 
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
   $('#sign-out').on('submit', onSignOut);
   $('#change-password').on('submit', onChangePassword);
-  $('#create-profile').on('submit', onCreateProfile);
+  // $('#create-profile').on('submit', onCreateProfile);
 };
 //
 module.exports = {
