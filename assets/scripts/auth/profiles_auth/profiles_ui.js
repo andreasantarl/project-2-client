@@ -11,14 +11,15 @@ const profileFailure = (error) => {
   console.error(error);
 };
 
-// const profileUpdateSuccess = (data) => {
-//   console.log('Profile updated!!');
-//   app.user = data.user;
-// };
-//
-// const profileUpdateFailure = (error) => {
-//   console.error(error);
-// };
+const profileUpdateSuccess = (data) => {
+  console.log('Profile data:', data);
+
+//  app.user = data.user;
+};
+
+const profileUpdateFailure = (error) => {
+  console.error(error);
+};
 
 const showProfileSuccess = (data) => {
 //  let profileId = data.user_id;
@@ -35,8 +36,8 @@ const profileShowFailure = (error) => {
 module.exports = {
   profileSuccess,
   profileFailure,
-  // profileUpdateSuccess,
-  // profileUpdateFailure,
+  profileUpdateSuccess,
+  profileUpdateFailure,
   showProfileSuccess,
   profileShowFailure,
 };
