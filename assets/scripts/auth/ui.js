@@ -18,6 +18,7 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   app.user = data.user;
+  console.log("App. user is ", app.user);
 };
 
 const signOutSuccess = () => {

@@ -39,21 +39,6 @@ const changePassword = (data) => {
   });
 };
 
-// const setProfile = (data) => {
-//   data.user_id = app.user.id;
-//   console.log("Ajax data  ", data);
-//   return $.ajax({
-//     url: app.host + '/profiles',
-//     method: "POST",
-//     headers: {
-//       Authorization: 'Token token=' + app.user.token,
-//     },
-//     data: {
-//       'profile': data
-//     }
-//   });
-// };
-
 module.exports = {
   signUp,
   signIn,

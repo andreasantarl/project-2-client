@@ -13,19 +13,27 @@ const onCreateProfile = (event) => {
   .fail(ui.profileFailure);
 };
 
-const onUpdateProfile = (event) => {
+const onShowProfile = (event) => {
   event.preventDefault();
-  let data = getFormFields(event.target);
-  api.updateProfile(data)
-  .done(ui.profileUpdateSuccess)
-  .fail(ui.profileUpdateFailure);
+  api.showProfile()
+  .done(ui.showProfileSuccess)
+  .fail(ui.profileShowFailure);
 };
+
+// const onUpdateProfile = (event) => {
+//   event.preventDefault();
+//   let data = getFormFields(event.target);
+//   api.updateProfile(data)
+//   .done(ui.profileUpdateSuccess)
+//   .fail(ui.profileUpdateFailure);
+// };
 
 const addHandlers = () => {
   $('#create-profile').on('submit', onCreateProfile);
-  $('#update-profile').on('submit', onUpdateProfile);
+  $('#show-profile').on('submit', onShowProfile);
+  // $('#update-profile').on('submit', onUpdateProfile);
 };
-//
+
 module.exports = {
   addHandlers,
 };
