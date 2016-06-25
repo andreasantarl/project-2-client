@@ -10,6 +10,7 @@ const success = (data) => {
   } else {
     console.log('Success');
   }
+
 };
 
 const failure = (error) => {
@@ -19,6 +20,7 @@ const failure = (error) => {
 const signInSuccess = (data) => {
   app.user = data.user;
   console.log("App. user is ", app.user);
+    $("#loginModal").modal("hide");
 };
 
 const signOutSuccess = () => {

@@ -26,7 +26,7 @@ const showProfileSuccess = (data) => {
 
   console.log("Show profile data:", data);
   // //let profile_user = profile.user_id;
-  // $("#display-profile").append(profile);
+   $("#view-profile").text("Profile Data: " + data.profile.first_name + " " + data.profile.last_name);
 };
 
 const profileShowFailure = (error) => {
