@@ -7,51 +7,96 @@
     <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
   </head>
   <body class="container-fluid">
-      <article>
-        <form id="sign-up">
-          <fieldset>
-            <legend>Sign up!</legend>
-            <input type="text" name="credentials[email]" placeholder="Email">
-            <input type="password" name="credentials[password]" placeholder="Password">
-            <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-            <input type="submit" name="submit" value="Sign up!">
-          </fieldset>
-        </form>
 
-        <form id="sign-in">
-          <fieldset>
-            <legend>Sign In!</legend>
-            <input type="text" name="credentials[email]" placeholder="Email">
-            <input type="password" name="credentials[password]" placeholder="Password">
-            <input type="submit" name="submit" value="Sign In">
-          </fieldset>
-        </form>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#loginModal">
+      Sign Up/Sign In
+    </button>
 
-        <form id="create-profile">
-          <fieldset>
-            <legend>Create a user profile</legend>
-            <input type="text" name="first_name" placeholder="First name">
-            <input type="text" name="last_name" placeholder="Last name">
-            <input type="submit" name="submit" value="Create your profile">
-          </fieldset>
-        </form>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="loginModalLabel">Sign Up or Sign In</h4>
+          </div>
+          <div class="modal-body">
 
-        <form id="show-profile">
-          <fieldset>
-            <legend>Update your user profile</legend>
-            <input type="submit" name="submit" value="View your profile">
-            <div id="display-profile"></div>
-          </fieldset>
-        </form>
+            <form id="sign-up">
+              <fieldset>
+                <legend>Sign up!</legend>
+                <input type="text" name="credentials[email]" placeholder="Email">
+                <input type="password" name="credentials[password]" placeholder="Password">
+                <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                <input type="submit" name="submit" value="Sign up!">
+              </fieldset>
+            </form>
+            <br>
 
-        <form id="update-profile">
-          <fieldset>
-            <legend>Update your user profile</legend>
-            <input type="text" name="first_name" placeholder="First name">
-            <input type="text" name="last_name" placeholder="Last name">
-            <input type="submit" name="submit" value="Update your profile">
-          </fieldset>
-        </form>
+            <form id="sign-in">
+              <fieldset>
+                <legend>Sign In!</legend>
+                <input type="text" name="credentials[email]" placeholder="Email">
+                <input type="password" name="credentials[password]" placeholder="Password">
+                <input type="submit" name="submit" value="Sign In">
+              </fieldset>
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#profileModal">
+      My Profile
+    </button>
+    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="profileModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+
+              <form id="create-profile">
+                <fieldset>
+                  <legend>Create a user profile</legend>
+                  <input type="text" name="first_name" placeholder="First name">
+                  <input type="text" name="last_name" placeholder="Last name">
+                  <input type="submit" name="submit" value="Create your profile">
+                </fieldset>
+              </form>
+              <br>
+
+              <form id="show-profile">
+                <fieldset>
+                  <legend>View your user profile</legend>
+                  <input type="submit" name="submit" value="View your profile">
+                  <div id="display-profile"></div>
+                </fieldset>
+              </form>
+              <br>
+
+              <form id="update-profile">
+                <fieldset>
+                  <legend>Update your user profile</legend>
+                  <input type="text" name="first_name" placeholder="First name">
+                  <input type="text" name="last_name" placeholder="Last name">
+                  <input type="submit" name="submit" value="Update your profile">
+                </fieldset>
+              </form>
+
+            </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
         <form id="sign-out">
           <fieldset>
@@ -68,7 +113,7 @@
             <input type="submit" name="submit" value="Change Password">
           </fieldset>
         </form>
-      </article>
+
 
       <form id="create-workout">
         <legend>Add a new workout!</legend>
@@ -81,7 +126,7 @@
       </form>
     <div class="content">
 
-
+      This is some text.
     </div>
   </body>
 </html>
