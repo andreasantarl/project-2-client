@@ -116,13 +116,30 @@
 
 
       <form id="create-workout">
-        <legend>Add a new workout!</legend>
-        <input type="text" name="cardio_desc" placeholder="What did you do?*" required>
-        <input type="date" name="cardio_date" placeholder="Date*" required>
-        <input type="number" name="cardio_duration" placeholder="Duration in minutes">
-        <input type="number" name="cardio_distance" placeholder="Distance in miles">
-        <input type="text" name="cardio_notes" placeholder="Notes">
-        <input type="submit" name="submit" value="Add a workout!">
+        <fieldset>
+          <legend>Add a new workout!</legend>
+          <input type="text" name="cardio_desc" placeholder="What did you do?*" required>
+          <input type="date" name="cardio_date" placeholder="Date*" required>
+          <input type="number" name="cardio_duration" placeholder="Duration in minutes">
+          <input type="number" name="cardio_distance" placeholder="Distance in miles">
+          <input type="text" name="cardio_notes" placeholder="Notes">
+          <input type="submit" name="submit" value="Add a workout!">
+        </fieldset>
+      </form>
+
+      <form id="see-workouts">
+        <fieldset>
+          <legend>View all of your workouts</legend>
+          <input type="submit" name="submit" value="View your workouts!">
+        </fieldset>
+      </form>
+      
+      <form id="find-workout">
+        <fieldset>
+          <legend>Find an old workout</legend>
+          <input type="date" name="cardio_date" placeholder="Pick a date">
+          <input type="submit" name="submit" value="Find a workout!">
+        </fieldset>
       </form>
     <div class="content">
 
