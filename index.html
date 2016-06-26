@@ -109,11 +109,11 @@
       <form id="create-workout">
         <fieldset>
           <legend>Add a new workout!</legend>
-          <input type="text" name="cardio_desc" placeholder="What did you do?*" required>
-          <input type="date" name="cardio_date" placeholder="Date*" required>
-          <input type="number" name="cardio_duration" placeholder="Duration in minutes">
-          <input type="number" name="cardio_distance" placeholder="Distance in miles">
-          <input type="text" name="cardio_notes" placeholder="Notes">
+          <input class="clear_field" type="text" name="cardio_desc" placeholder="What did you do?*" required>
+          <input class="clear_field" type="date" name="cardio_date" placeholder="Date*" required>
+          <input class="clear_field" type="number" name="cardio_duration" placeholder="Duration in minutes">
+          <input class="clear_field" type="number" name="cardio_distance" placeholder="Distance in miles">
+          <input class="clear_field" type="text" name="cardio_notes" placeholder="Notes">
           <input type="submit" name="submit" value="Add a workout!">
         </fieldset>
       </form>
@@ -121,7 +121,7 @@
       <form id="see-workouts">
         <fieldset>
           <legend>View all of your workouts</legend>
-          <input type="submit" name="submit" value="View your workouts!">
+          <input id="see-workouts-button" type="submit" name="submit" value="View your workouts!">
         </fieldset>
       </form>
     <br><br>
@@ -131,10 +131,12 @@
       <form id="find-workout">
         <fieldset>
           <legend>Find an old workout</legend>
-          <input type="date" name="cardio_date" placeholder="Pick a date">
-          <input type="submit" name="submit" value="Find a workout!">
+          <input id="date-to-find" type="date" name="cardio_date" placeholder="Pick a date">
+          <input id="find-workout-button" type="submit" name="submit" value="Find a workout!">
         </fieldset>
       </form>
+      <div id="see-workouts-by-date">
+      </div>
     <br><br>
     <div class="content">
       <form id="show-profile">

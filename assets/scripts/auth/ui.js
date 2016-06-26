@@ -5,6 +5,7 @@ const app = require('../app.js');
 // let userId;
 
 const success = (data) => {
+  app.user = data.user; //
   if (data) {
     console.log(data);
   } else {

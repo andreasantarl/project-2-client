@@ -13,6 +13,7 @@ const profileFailure = (error) => {
 
 const profileUpdateSuccess = (data) => {
   console.log('Profile data:', data);
+  app.user = data.user; //
 
 //  app.user = data.user;
 };
@@ -23,7 +24,7 @@ const profileUpdateFailure = (error) => {
 
 const showProfileSuccess = (data) => {
 //  let profileId = data.user_id;
-
+app.user = data.user; //
   console.log("Show profile data:", data);
   // //let profile_user = profile.user_id;
    $("#view-profile").text("Profile Data: " + data.profile.first_name + " " + data.profile.last_name);
