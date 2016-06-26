@@ -15,13 +15,14 @@ const createWorkoutFailure = (error) => {
 };
 
 const seeWorkoutsAll = (data) => {
-  $('#view-workouts').html("Check out all of the hard work you've put in: <br><br>" + index.workoutIterator(data.workouts));
-  // let displayBooks = function(books){
-  //   let bookListingTemplate = require('../templates/book-listing.handlebars');
-  //     $('.content').text("");
-  //     $('.content').append(bookListingTemplate(books));
-  //   };
+ $('#view-workouts').html("Check out all of the hard work you've put in: <br><br>" + index.workoutIterator(data.workouts));
 };
+
+//attempt- failed- at using handlebars
+//   let seeWorkoutsAll = (workouts) => {
+//     let workoutListingTemplate = require('../../templates/display_workouts_buttons.handlebars');
+//     $('#view-workouts').html(workoutListingTemplate(workouts));
+// };
 
 const findWorkoutByDate = (date, data) => {
   $("#see-workouts-by-date").html("Here are your workouts on the date: " + index.findWorkoutInformation(date, data));
