@@ -18,7 +18,7 @@ const createNewWorkout = (data) => {
 };
 
 const seeWorkouts = () => {
-    console.log("App data", app);
+  //  console.log("App data", app);
   //  console.log("Data data", data);
   return $.ajax({
     url: app.host + '/workouts',
@@ -30,11 +30,11 @@ const seeWorkouts = () => {
 };
 
 const deleteWorkout = (buttonId) => {
- console.log("ButtonId: ", buttonId);
- console.log("data in delete workouts: ", app.user.workouts[buttonId] );
-console.log("App.user.workouts.buttonId:  ", app.user.workouts.buttonId);
+//  console.log("ButtonId: ", buttonId);
+//  console.log("data in delete workouts: ", app.user.workouts[buttonId].id );
+// console.log("App.user.workouts.buttonId:  ", app.user.workouts.buttonId);
   return $.ajax({
-    url: app.host + '/workouts/' + app.user.workouts[buttonId].id,
+    url: app.host + '/workouts/' + buttonId,
     method: "DELETE",
     headers: {
       Authorization: 'Token token=' + app.user.token,
@@ -42,8 +42,23 @@ console.log("App.user.workouts.buttonId:  ", app.user.workouts.buttonId);
   });
 };
 
+const editWorkout = (data, buttonId) => {
+  // data.user_id = app.user.user_id;
+  console.log("UpdateWorkout Ajax data  ", data);
+  debugger;
+  return $.ajax({
+    url: app.host + '/workouts/71',
+    method: "PATCH",
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+    data: data,
+  });
+};
+
 module.exports = {
   createNewWorkout,
   seeWorkouts,
   deleteWorkout,
+  editWorkout,
 };

@@ -1,7 +1,16 @@
-{{#each workouts}}
-<div class="row">
-<button data-id="{{id}}">Delete</button>
-<button data-id="{{id}}">Update</button>
-{{> workout}}
-<br>
-{{/each}}
+{{#workouts}}
+<form class="workout-display">
+  <fieldset>
+    <div class="row">
+      <div>
+        {{> workout}}
+      </div>
+    </div>
+    <input type="submit" class="delete-workout btn btn-default" data-id="{{id}}" value="Delete">
+    <input type="submit" class="edit-workout btn btn-default" data-id="{{id}}" vale="Update">
+  </fieldset>
+</form>
+{{/workouts}}
+
+
+<!-- this.attr(data id) -->

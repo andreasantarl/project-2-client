@@ -1,16 +1,14 @@
-{{#each workout}}
-  <h1>{{cardio_desc}}</h1>
-  <h2>{{cardio_date}}</h2>
-  {{#if cardio_duration}}
-    {{cardio_duration}}
-  {{/if}}
-  {{#if cardio_duration}}
-    {{cardio_duration}}
-  {{/if}}
-  {{#if cardio_distance}}
-    {{cardio_distance}}
-  {{/if}}
-  {{#if cardio_notes}}
-    {{cardio_notes}}
-  {{/if}}
-{{/each}}
+
+<h4>{{cardio_date}}</h4>
+<h4>
+  <input type="text" name=workout[cardio_desc] value={{cardio_desc}}>
+</h4>
+{{#if cardio_duration}}
+  <input type="number" name=workout[cardio_duration] value={{cardio_duration}}>
+{{/if}}
+{{#if cardio_distance}}
+  <input type="number" name=workout[cardio_distance] value={{cardio_distance}}>
+{{/if}}
+{{#if cardio_notes}}
+  <input type="text" name=workout[cardio_notes] value={{cardio_notes}}>
+{{/if}}
