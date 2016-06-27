@@ -8,16 +8,16 @@ function workoutIterator(data) {
   let workoutInfo = '';
   for (let i = 0; i < data.length; i++) {
     let workout = data[i];
-    workoutInfo += "<input class='delete-workout' id='" + i + "' type='submit' name='submit' value='Delete workout'><br>Date: " + workout.cardio_date + "<br>";
-    workoutInfo += "Description: " + workout.cardio_desc + "<br>";
+    workoutInfo += "<input class='delete-workout' id='" + i + "' type='submit' name='submit' value='Delete workout'><br>Date: <input type='text' value='" + workout.cardio_date + "'><br>";
+    workoutInfo += "Description: <input type='text' value='" + workout.cardio_desc + "'><br>";
     if (workout.cardio_duration !== '' && workout.cardio_duration !== null) {
-      workoutInfo += "Duration: " + workout.cardio_duration + "<br>";
+      workoutInfo += "Duration: <input type='text' value='" + workout.cardio_duration + "'><br>";
     }
     if (workout.cardio_distance !== '' && workout.cardio_distance !== null) {
-      workoutInfo += "Distance: " + workout.cardio_distance + "<br>";
+      workoutInfo += "Distance: <input type='text' value='" + workout.cardio_distance + "'><br>";
     }
     if (workout.cardio_notes !== '' && workout.cardio_notes !== null) {
-      workoutInfo += "Notes: " + workout.cardio_notes + "<br>";
+      workoutInfo += "Notes: <input type='text' value='" + workout.cardio_notes + "'><br>";
     }
     workoutInfo += "<br>";
   }
@@ -50,16 +50,16 @@ function findWorkoutInformation(date, data) {
       console.log("workout date: ", workout.cardio_date);
       console.log("date passed:", date);
       if (date === workoutDate) {
-         workoutInfo += "<input class='delete-workout' id='" + i + "' type='submit' name='submit' value='Delete workout'><br>Date: " + workout.cardio_date + "<br>";
-         workoutInfo += "Description: " + workout.cardio_desc + "<br>";
+         workoutInfo += "<input class='delete-workout' id='" + i + "' type='submit' name='submit' value='Delete workout'><br>Date: <input type='text' value='" + workout.cardio_date + "'><br>";
+         workoutInfo += "Description: <input type='text' value='" + workout.cardio_desc + "'><br>";
          if (workout.cardio_duration !== '' && workout.cardio_duration !== null) {
-           workoutInfo += "Duration: " + workout.cardio_duration + "<br>";
+           workoutInfo += "Duration: <input type='text' value='" + workout.cardio_duration + "'><br>";
          }
          if (workout.cardio_distance !== '' && workout.cardio_distance !== null) {
-           workoutInfo += "Distance: " + workout.cardio_distance + "<br>";
+           workoutInfo += "Distance: <input type='text' value='" + workout.cardio_distance + "'><br>";
          }
          if (workout.cardio_notes !== '' && workout.cardio_notes !== null) {
-           workoutInfo += "Notes: " + workout.cardio_notes + "<br>";
+           workoutInfo += "Notes: <input type='text' value='" + workout.cardio_notes + "'><br>";
          }
          workoutInfo += "<br>";
        }
