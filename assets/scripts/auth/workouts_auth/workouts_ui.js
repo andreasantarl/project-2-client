@@ -30,11 +30,11 @@ const findWorkoutByDate = (date, data) => {
 
 const seeWorkoutsSuccess = (data) => {
   app.user = data.user;
-  if ($('#find-workout').hasClass('clicked')) {
+  if ($('#find-workout-button').hasClass('clicked')) {
     let date = $('#date-to-find').val();
     findWorkoutByDate(date, data);
   }
-  if ($('#see-workouts').hasClass('clicked')) {
+  if ($('#see-workouts-button').hasClass('clicked')) {
     seeWorkoutsAll(data);
   }
 };

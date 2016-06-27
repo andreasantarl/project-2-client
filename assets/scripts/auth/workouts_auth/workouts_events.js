@@ -14,6 +14,10 @@ const onCreateWorkout = (event) => {
   .fail(ui.createWorkoutFailure);
 };
 
+const addClassClicked = (event) => {
+  $(event.target).addClass('clicked');
+};
+
 const onSeeWorkouts = (event) => {
   event.preventDefault();
   let data = getFormFields(event.target);
@@ -21,16 +25,16 @@ const onSeeWorkouts = (event) => {
   .done(ui.seeWorkoutsSuccess)
   .fail(ui.seeWorkoutsFailure);
 };
+// (function(event){
+//   console.log(event.target.id);
+// });
+
+
 
 const addHandlers = () => {
   $('#create-workout').on('submit', onCreateWorkout);
-  $('#see-workouts').on('submit', onSeeWorkouts).on('click', function() {
-    $(this).addClass('clicked');
-  });
-  $('#find-workout').on('submit', onSeeWorkouts).on('click', function() {
-    $(this).addClass('clicked');
-  });
-  $('#')
+  $('#see-workouts').on('submit', onSeeWorkouts).on('click', addClassClicked);
+  $('#find-workout').on('submit', onSeeWorkouts).on('click', addClassClicked);
 };
 
 module.exports = {
