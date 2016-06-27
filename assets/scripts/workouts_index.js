@@ -8,7 +8,7 @@ function workoutIterator(data) {
   let workoutInfo = '';
   for (let i = 0; i < data.length; i++) {
     let workout = data[i];
-    workoutInfo += "<button>Delete workout</button><br>Date: " + workout.cardio_date + "<br>";
+    workoutInfo += "<button class='delete-workout' id='" + i + "'>Delete workout</button><br>Date: " + workout.cardio_date + "<br>";
     workoutInfo += "Description: " + workout.cardio_desc + "<br>";
     if (workout.cardio_duration !== '' && workout.cardio_duration !== null) {
       workoutInfo += "Duration: " + workout.cardio_duration + "<br>";
@@ -44,7 +44,7 @@ function findWorkoutInformation(date, data) {
   for (let i = 0; i < data.workouts.length; i++) {
     let workout = data.workouts[i];
     if (workout.cardio_date === date) {
-       workoutInfo += "<button>Delete workout</button><br>Date: " + workout.cardio_date + "<br>";
+       workoutInfo += "<button class='delete-workout' id='" + i + "'>Delete workout</button><br>Date: " + workout.cardio_date + "<br>";
        workoutInfo += "Description: " + workout.cardio_desc + "<br>";
        if (workout.cardio_duration !== '' && workout.cardio_duration !== null) {
          workoutInfo += "Duration: " + workout.cardio_duration + "<br>";

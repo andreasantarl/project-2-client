@@ -30,6 +30,7 @@ const addHandlers = () => {
   $('#find-workout').on('submit', onSeeWorkouts).on('click', function() {
     $(this).addClass('clicked');
   });
+  $('#')
 };
 
 module.exports = {
