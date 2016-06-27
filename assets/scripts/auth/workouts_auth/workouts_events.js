@@ -29,12 +29,21 @@ const onSeeWorkouts = (event) => {
 //   console.log(event.target.id);
 // });
 
+const onDeleteWorkout = (event) => {
+  console.log("Billshue");
+  event.preventDefault();
+  let buttonId = $('.delete-workout').attr('id');
+  console.log("Delete button id: ", buttonId);
+
+};
+
 
 
 const addHandlers = () => {
   $('#create-workout').on('submit', onCreateWorkout);
   $('#see-workouts').on('submit', onSeeWorkouts).on('click', addClassClicked);
   $('#find-workout').on('submit', onSeeWorkouts).on('click', addClassClicked);
+  $('.delete-workout').on('submit', onDeleteWorkout);
 };
 
 module.exports = {
