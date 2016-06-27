@@ -4,6 +4,7 @@ const getFormFields = require('../../../../lib/get-form-fields');
 
 const api = require('./workouts_api');
 const ui = require('./workouts_ui');
+const app = require('./../../app');
 //const index = require('./../../workouts_index');
 
 const onCreateWorkout = (event) => {
@@ -26,18 +27,23 @@ const onSeeWorkouts = (event) => {
   .fail(ui.seeWorkoutsFailure);
 };
 
+
 const onDeleteWorkout = (event) => {
-  console.log("Billshue");
   event.preventDefault();
-  let buttonId = $('.delete-workout').attr('id');
+  let buttonId = $(event.target).attr('id');
   console.log("Delete button id: ", buttonId);
+  api.deleteWorkout(buttonId)
+  .done(ui.deleteWorkoutSuccess)
+  .fail(ui.deleteWorkoutFailure);
 };
+
 
 const addHandlers = () => {
   $('#create-workout').on('submit', onCreateWorkout);
   $('#see-workouts').on('submit', onSeeWorkouts).on('click', addClassClicked);
   $('#find-workout').on('submit', onSeeWorkouts).on('click', addClassClicked);
-  $('.delete-workout').on('submit', onDeleteWorkout);
+  $('#view-workouts').on('click', onDeleteWorkout);
+  //$('#find-workout').on('click', onDeleteWorkout);
 };
 
 module.exports = {

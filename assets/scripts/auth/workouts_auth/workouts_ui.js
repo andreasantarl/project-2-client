@@ -6,7 +6,7 @@ const index = require('../../workouts_index.js');
 
 const createWorkoutSuccess = (data) => {
 //  console.log('New workout created!');
-  app.user = data.user;
+//  app.user = data.user;
   $('.clear_field').val('');
 };
 
@@ -40,8 +40,18 @@ const seeWorkoutsSuccess = (data) => {
   }
 };
 
-
 const seeWorkoutsFailure = (error) => {
+  console.error(error);
+};
+
+const deleteWorkoutSuccess = () => {
+  console.log("Deleted!");
+  console.log('User signed out successfully');
+  app.user.workouts.id = null;
+//  app.user.workout.buttonId.id = null;
+};
+
+const deleteWorkoutFailure = (error) => {
   console.error(error);
 };
 
@@ -50,4 +60,6 @@ module.exports = {
   createWorkoutFailure,
   seeWorkoutsSuccess,
   seeWorkoutsFailure,
+  deleteWorkoutSuccess,
+  deleteWorkoutFailure,
 };
