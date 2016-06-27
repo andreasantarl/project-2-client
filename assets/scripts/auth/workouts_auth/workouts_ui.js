@@ -25,11 +25,12 @@ const seeWorkoutsAll = (data) => {
 // };
 
 const findWorkoutByDate = (date, data) => {
+  console.log("workout date data:", date, data);
   $("#see-workouts-by-date").html("Here are your workouts on the date: " + index.findWorkoutInformation(date, data));
 };
 
 const seeWorkoutsSuccess = (data) => {
-  app.user = data.user;
+//  app.user = data.user;
   if ($('#find-workout-button').hasClass('clicked')) {
     let date = $('#date-to-find').val();
     findWorkoutByDate(date, data);

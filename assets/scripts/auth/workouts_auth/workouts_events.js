@@ -20,24 +20,18 @@ const addClassClicked = (event) => {
 
 const onSeeWorkouts = (event) => {
   event.preventDefault();
-  let data = getFormFields(event.target);
-  api.seeWorkouts(data)
+  //let data = getFormFields(event.target);
+  api.seeWorkouts()
   .done(ui.seeWorkoutsSuccess)
   .fail(ui.seeWorkoutsFailure);
 };
-// (function(event){
-//   console.log(event.target.id);
-// });
 
 const onDeleteWorkout = (event) => {
   console.log("Billshue");
   event.preventDefault();
   let buttonId = $('.delete-workout').attr('id');
   console.log("Delete button id: ", buttonId);
-
 };
-
-
 
 const addHandlers = () => {
   $('#create-workout').on('submit', onCreateWorkout);
