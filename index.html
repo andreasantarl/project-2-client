@@ -24,32 +24,36 @@
             <form id="sign-up">
               <fieldset>
                 <legend>Sign up!</legend>
-                <input type="text" name="credentials[email]" placeholder="Email">
-                <input type="password" name="credentials[password]" placeholder="Password">
-                <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-                <input type="submit" name="submit" value="Sign up!">
+                <input class='sign-up-info' type="text" name="credentials[email]" placeholder="Email">
+                <input class='sign-up-info' type="password" name="credentials[password]" placeholder="Password">
+                <input class='sign-up-info' type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                <input class="btn btn-primary btn-med" type="submit" name="submit" value="Sign up!">
               </fieldset>
             </form>
+            <div id="sign-up-message">
+            </div>
             <br>
 
             <form id="sign-in">
               <fieldset>
                 <legend>Sign In!</legend>
-                <input type="text" name="credentials[email]" placeholder="Email">
-                <input type="password" name="credentials[password]" placeholder="Password">
-                <input type="submit" name="submit" value="Sign In">
+                <input class="login-info" type="text" name="credentials[email]" placeholder="Email">
+                <input class="login-info" type="password" name="credentials[password]" placeholder="Password">
+                <input class="btn btn-primary btn-med" type="submit" name="submit" value="Sign In">
               </fieldset>
             </form>
+            <div id="sign-in-message">
+            </div>
 
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
           </div>
         </div>
       </div>
     </div>
 
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#profileModal">
+    <button id="profileModalbutton" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#profileModal">
       My Profile
     </button>
     <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel">
@@ -66,7 +70,7 @@
                   <legend>Create a user profile</legend>
                   <input type="text" name="first_name" placeholder="First name">
                   <input type="text" name="last_name" placeholder="Last name">
-                  <input type="submit" name="submit" value="Create your profile">
+                  <input class="btn btn-primary btn-med" type="submit" name="submit" value="Create your profile">
                 </fieldset>
               </form>
               <br>
@@ -76,36 +80,74 @@
                   <legend>Update your user profile</legend>
                   <input type="text" name="first_name" placeholder="First name">
                   <input type="text" name="last_name" placeholder="Last name">
-                  <input type="submit" name="submit" value="Update your profile">
+                  <input class="btn btn-primary btn-med" type="submit" name="submit" value="Update your profile">
                 </fieldset>
               </form>
+              <div class="content">
+                <form id="show-profile">
+                  <fieldset>
+                    <legend>View your user profile</legend>
+                    <input class="btn btn-primary btn-med" type="submit" name="submit" value="View your profile">
+                    <div id="display-profile"></div>
+                  </fieldset>
+                </form>
+                <br>
+
+                <div id="view-profile">
+                </div>
+
+              </div>
 
             </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                   </div>
                 </div>
               </div>
             </div>
 
+
+
+        <button id="changePasswordModalbutton" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#changePasswordModal">
+          Change Password
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="myChangePasswordModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="changePasswordModalLabel">Change Password</h4>
+              </div>
+              <div class="modal-body">
+                <form id="change-password">
+                  <fieldset>
+                    <legend>Change Password!</legend>
+                    <input class='password-info' type="password" name="passwords[old]" placeholder="Current Password">
+                    <input class='password-info' type="password" name="passwords[new]" placeholder="New Password">
+                    <input type="submit" name="submit" value="Change Password">
+                  </fieldset>
+                </form>
+              </div>
+              <div id="change-password-message">
+              </div>
+              <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
         <form id="sign-out">
           <fieldset>
-            <legend>Sign Out!</legend>
-            <input class="sign-out" type="submit" value="Sign Out">
+          <!-- <legend>Sign Out!</legend> -->
+            <input class="sign-out btn btn-default" type="submit" value="Sign Out">
           </fieldset>
         </form>
-
-        <form id="change-password">
-          <fieldset>
-            <legend>Change Password!</legend>
-            <input type="password" name="passwords[old]" placeholder="Current Password">
-            <input type="password" name="passwords[new]" placeholder="New Password">
-            <input type="submit" name="submit" value="Change Password">
-          </fieldset>
-        </form>
-
-
+<div id="workout-information-body">
       <form id="create-workout">
         <fieldset>
           <legend>Add a new workout!</legend>
@@ -142,7 +184,7 @@
       </div>
     </div>
     <br><br>
-    <div class="content">
+    <!-- <div class="content">
       <form id="show-profile">
         <fieldset>
           <legend>View your user profile</legend>
@@ -155,6 +197,7 @@
       <div id="view-profile">
       </div>
 
-    </div>
+    </div> -->
+  </div>
   </body>
 </html>

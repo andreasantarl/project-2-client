@@ -1,5 +1,7 @@
 'use strict';
 
+const profileTemplate = require('../../templates/profile.handlebars');
+
 //const app = require('../../app.js');
 
 const profileSuccess = () => {
@@ -25,8 +27,10 @@ const profileUpdateFailure = (error) => {
 const showProfileSuccess = (data) => {
 //  let profileId = data.user_id;
 //app.user = data.user; //
-//  console.log("Show profile data:", data);
+  console.log("Show profile data:", data);
   // //let profile_user = profile.user_id;
+
+    //$("#view-profile").html(profileTemplate(data));
    $("#view-profile").html("Profile Data: <br> First Name: " + data.profile.first_name + "<br>Last Name: " + data.profile.last_name);
 };
 
