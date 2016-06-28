@@ -70,6 +70,7 @@
                   <legend>Create a user profile</legend>
                   <input type="text" name="first_name" placeholder="First name">
                   <input type="text" name="last_name" placeholder="Last name">
+                  <input type="hidden" name="user_id">
                   <input class="btn btn-primary btn-med" type="submit" name="submit" value="Create your profile">
                 </fieldset>
               </form>
@@ -80,6 +81,7 @@
                   <legend>Update your user profile</legend>
                   <input type="text" name="first_name" placeholder="First name">
                   <input type="text" name="last_name" placeholder="Last name">
+                  <input type="hidden" name="user_id">
                   <input class="btn btn-primary btn-med" type="submit" name="submit" value="Update your profile">
                 </fieldset>
               </form>
@@ -87,7 +89,7 @@
                 <form id="show-profile">
                   <fieldset>
                     <legend>View your user profile</legend>
-                    <input class="btn btn-primary btn-med" type="submit" name="submit" value="View your profile">
+                    <input class="btn btn-primary btn-med" type="submit" name="submit" data-id="" value="View your profile">
                     <div id="display-profile"></div>
                   </fieldset>
                 </form>
@@ -165,11 +167,11 @@
           <form id="create-workout">
             <fieldset>
               <legend>Add a new workout!</legend>
-              <input class="clear_field" type="text" name="cardio_desc" placeholder="What did you do?*" required>
-              <input class="clear_field" type="date" name="cardio_date" placeholder="Date*" required>
-              <input class="clear_field" type="number" name="cardio_duration" placeholder="Duration in minutes" value=' '>
-              <input class="clear_field" type="number" name="cardio_distance" placeholder="Distance in miles" value=' '>
-              <input class="clear_field" type="text" name="cardio_notes" placeholder="Notes" value=' '>
+              Description: <input class="form-control clear_field" type="text" name="cardio_desc" placeholder="What did you do?" required>
+              Date: <input class="form-control clear_field" type="date" name="cardio_date" placeholder="Date" required>
+              Duration: <input class="form-control clear_field" type="number" name="cardio_duration" placeholder="Duration in minutes">
+              Distance: <input class="form-control clear_field" type="number" name="cardio_distance" placeholder="Distance in miles">
+              Notes: <input class="form-control clear_field" type="text" name="cardio_notes" placeholder="Notes">
               <input class="btn btn-md" type="submit" name="submit" value="Add a workout!">
             </fieldset>
           </form>
@@ -187,14 +189,13 @@
 
   <!-- Modal -->
   <div class="modal fade" id="mySeeWorkoutsModal" tabindex="-1" role="dialog" aria-labelledby="mySeeWorkoutsModalLabel">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title" id="mySeeWorkoutsModalLabel">Modal title</h4>
         </div>
         <div class="modal-body">
-          <br><br>
           <div id="all-workouts">
             <form id="see-workouts">
               <fieldset>
@@ -202,11 +203,9 @@
                 <input id="see-workouts-button" type="submit" name="submit" value="View your workouts!">
               </fieldset>
             </form>
-          <br><br>
             <div id="view-workouts">
             </div>
           </div>
-          <br><br>
         </div>
         <div class="modal-footer">
         </div>

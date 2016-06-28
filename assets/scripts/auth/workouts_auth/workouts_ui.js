@@ -59,9 +59,9 @@ const onEditWorkout = (event) => {
 };
 
 const seeWorkoutsSuccess = (data) => {
-  app.user.workouts = data.workouts;
- $('#view-workouts').html('');
-  $('#view-workouts').html(workoutTemplate(app.user));
+  let workouts = data.user;
+  $('#view-workouts').html('');
+  $('#view-workouts').html(workoutTemplate(workouts));
   $('.delete-workout').on('click', onDeleteWorkout);
   $('.workout-display').on('submit', onEditWorkout);
 };

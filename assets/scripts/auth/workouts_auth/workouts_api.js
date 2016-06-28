@@ -18,13 +18,23 @@ const createNewWorkout = (data) => {
 
 const seeWorkouts = () => {
   return $.ajax({
-    url: app.host + '/workouts',
+    url: app.host + '/users/' + app.user.id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token,
     },
   });
 };
+
+// const seeWorkouts = () => {
+//   return $.ajax({
+//     url: app.host + '/workouts',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + app.user.token,
+//     },
+//   });
+// };
 
 const deleteWorkout = (buttonId) => {
   return $.ajax({

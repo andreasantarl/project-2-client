@@ -17,10 +17,9 @@ const setProfile = (data) => {
   });
 };
 
-const showProfile = () => {
-  console.log("App data", app);
+const showProfile = (profile_id) => {
   return $.ajax({
-    url: app.host + '/profiles/' + app.user.profile.id,
+    url: app.host + '/profiles/' + profile_id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token,
