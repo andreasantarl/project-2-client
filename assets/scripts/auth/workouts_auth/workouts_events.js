@@ -14,6 +14,7 @@ const onCreateWorkout = (event) => {
 
 const onSeeWorkouts = (event) => {
   event.preventDefault();
+//  $(event.target).addClass('clicked');
   api.seeWorkouts()
   .done(ui.seeWorkoutsSuccess)
   .fail(ui.seeWorkoutsFailure);

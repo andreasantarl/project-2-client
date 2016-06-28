@@ -35,9 +35,9 @@ const editWorkoutFailure = (error) => {
   console.error(error);
 };
 
-const findWorkoutByDate = (date, data) => {
-  $("#see-workouts-by-date").html("Here are your workouts on the date: " + index.findWorkoutInformation(date, data));
-};
+// const findWorkoutByDate = (date, data) => {
+//   $("#see-workouts-by-date").html("Here are your workouts on the date: " + index.findWorkoutInformation(date, data));
+// };
 
 const onDeleteWorkout = (event) => {
 event.preventDefault();
@@ -58,8 +58,35 @@ const onEditWorkout = (event) => {
     .fail();
 };
 
+// $('#see-workouts-button').on('click', function (event) {
+//         $(this).addClass('Clicked');
+//       });
+//
+// $('#find-workout-button').on('click', function (event) {
+//   event.preventDefault();
+//         $(this).addClass('Clicked');
+//       });
+
+const findWorkoutByDate = (date, data) => {
+console.log("workout date data:", date, data);
+
+};
+
 const seeWorkoutsSuccess = (data) => {
   app.user.workouts = data.workouts;
+  $('#see-workouts-button').on('click', function (event) {
+          $(this).addClass('Clicked');
+        });
+
+  $('#find-workout-button').on('click', function (event) {
+      event.preventDefault();
+          $(this).addClass('Clicked');
+          let date = $('#date-to-find').val();
+          findWorkoutByDate(date, data);
+         });
+//   if ($('#find-workout-button').hasClass('clicked')) {
+//
+
   $('#view-workouts').html('');
   $('#view-workouts').html(workoutTemplate(app.user));
   $('.delete-workout').on('click', onDeleteWorkout);
