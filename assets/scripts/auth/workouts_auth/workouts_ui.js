@@ -14,9 +14,9 @@ const createWorkoutFailure = (error) => {
   console.error(error);
 };
 
-const seeWorkoutsAll = (data) => {
- // $('#view-workouts').html("Check out all of the hard work you've put in: <br><br>" + index.workoutIterator(data));
-};
+// const seeWorkoutsAll = (data) => {
+//  // $('#view-workouts').html("Check out all of the hard work you've put in: <br><br>" + index.workoutIterator(data));
+// };
 
 const deleteWorkoutFailure = (error) => {
   console.error(error);
@@ -67,35 +67,35 @@ const onEditWorkout = (event) => {
 //         $(this).addClass('Clicked');
 //       });
 
-const findWorkoutByDate = (data) => {
-  let date = $('#date-to-find').val();
-console.log("workout date data:", date, data);
-let workoutInfo = '<br>';
- for (let i = 0; i < data.workouts.length; i++) {
-   let workout = data.workouts[i];
-      let workoutDate = data.workouts[i].cardio_date;
-      console.log("workout date: ", workoutDate);
-      console.log("date passed:", date);
-      if (date === workoutDate) {
-        workoutInfo += "<input class='delete-workout' id='" + i + "' type='submit' name='submit' value='Delete workout'><br>Date: " + workout.cardio_date + "<br>";
-          workoutInfo += "Description: " + workout.cardio_desc + "<br>";
-          if (workout.cardio_duration !== '' && workout.cardio_duration !== null) {
-           workoutInfo += "Duration: " + workout.cardio_duration + "<br>";
-         }
-          if (workout.cardio_distance !== '' && workout.cardio_distance !== null) {
-            workoutInfo += "Distance: " + workout.cardio_distance + "<br>";
-          }
-          if (workout.cardio_notes !== '' && workout.cardio_notes !== null) {
-            workoutInfo += "Notes: " + workout.cardio_notes + "<br>";
-          }
-          workoutInfo += "<br>";
-         }
-         if(workoutInfo === '<br>') {
-         workoutInfo += "Please choose a date with a workout";
-         }
-       }
-       return workoutInfo;
-};
+// const findWorkoutByDate = (data) => {
+//   let date = $('#date-to-find').val();
+// console.log("workout date data:", date, data);
+// let workoutInfo = '<br>';
+//  for (let i = 0; i < data.workouts.length; i++) {
+//    let workout = data.workouts[i];
+//       let workoutDate = data.workouts[i].cardio_date;
+//       console.log("workout date: ", workoutDate);
+//       console.log("date passed:", date);
+//       if (date === workoutDate) {
+//         workoutInfo += "<input class='delete-workout' id='" + i + "' type='submit' name='submit' value='Delete workout'><br>Date: " + workout.cardio_date + "<br>";
+//           workoutInfo += "Description: " + workout.cardio_desc + "<br>";
+//           if (workout.cardio_duration !== '' && workout.cardio_duration !== null) {
+//            workoutInfo += "Duration: " + workout.cardio_duration + "<br>";
+//          }
+//           if (workout.cardio_distance !== '' && workout.cardio_distance !== null) {
+//             workoutInfo += "Distance: " + workout.cardio_distance + "<br>";
+//           }
+//           if (workout.cardio_notes !== '' && workout.cardio_notes !== null) {
+//             workoutInfo += "Notes: " + workout.cardio_notes + "<br>";
+//           }
+//           workoutInfo += "<br>";
+//          }
+//          if(workoutInfo === '<br>') {
+//          workoutInfo += "Please choose a date with a workout";
+//          }
+//        }
+//        return workoutInfo;
+// };
 
 const seeWorkoutsSuccess = (data) => {
   app.user.workouts = data.workouts;
@@ -129,6 +129,18 @@ const seeWorkoutsFailure = (error) => {
   console.error(error);
 };
 
+const findWorkoutDateSuccess = (data) => {
+  console.log(data);
+  $('#see-workouts-by-date').html('');
+   $('#see-workouts-by-date').html(workoutTemplate(data));
+   $('.delete-workout').on('click', onDeleteWorkout);
+   $('.workout-display').on('submit', onEditWorkout);
+};
+
+const findWorkoutDateFailure = (error) => {
+  console.error(error);
+};
+
 module.exports = {
   createWorkoutSuccess,
   createWorkoutFailure,
@@ -138,4 +150,6 @@ module.exports = {
   deleteWorkoutFailure,
   editWorkoutSuccess,
   editWorkoutFailure,
+  findWorkoutDateSuccess,
+  findWorkoutDateFailure,
 };

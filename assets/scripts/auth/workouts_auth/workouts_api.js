@@ -48,9 +48,20 @@ const editWorkout = (data) => {
   });
 };
 
+const workoutsByDate = (data) => {
+  return $.ajax({
+    url: app.host + '/workouts/find/' + data,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+  });
+};
+
 module.exports = {
   createNewWorkout,
   seeWorkouts,
   deleteWorkout,
   editWorkout,
+  workoutsByDate,
 };

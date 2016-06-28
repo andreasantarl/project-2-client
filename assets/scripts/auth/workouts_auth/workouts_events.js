@@ -43,10 +43,19 @@ const onEditWorkout = (event) => {
     .fail(ui.seeWorkoutsFailure);
 };
 
+const onWorkoutsByDate = (event) => {
+  event.preventDefault();
+  let data = $("#date-to-find").val();
+  console.log("Date", data);
+  api.workoutsByDate(data)
+  .done(ui.findWorkoutDateSuccess)
+  .fail(ui.findWorkoutDateFailure);
+};
+
 const addHandlers = () => {
   $('#create-workout').on('submit', onCreateWorkout);
   $('#see-workouts').on('submit', onSeeWorkouts);//.on('click', addClassClicked);
-  $('#find-workout').on('submit', onSeeWorkouts);
+  $('#find-workout').on('submit', onWorkoutsByDate);
 
 };
 
