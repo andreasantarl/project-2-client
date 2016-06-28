@@ -46,6 +46,8 @@ const onEditWorkout = (event) => {
 const addHandlers = () => {
   $('#create-workout').on('submit', onCreateWorkout);
   $('#see-workouts').on('submit', onSeeWorkouts);//.on('click', addClassClicked);
+  $('#find-workout').on('submit', onSeeWorkouts);
+
 };
 
 module.exports = {
