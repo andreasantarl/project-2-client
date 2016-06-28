@@ -147,43 +147,107 @@
             <input class="sign-out btn btn-default" type="submit" value="Sign Out">
           </fieldset>
         </form>
+
+        <!-- Button trigger modal -->
+  <button id="myNewWorkoutButton" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myNewWorkoutModal">
+    Add a new workout!
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myNewWorkoutModal" tabindex="-1" role="dialog" aria-labelledby="myNewWorkoutModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myNewWorkoutModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <form id="create-workout">
+            <fieldset>
+              <legend>Add a new workout!</legend>
+              <input class="clear_field" type="text" name="cardio_desc" placeholder="What did you do?*" required>
+              <input class="clear_field" type="date" name="cardio_date" placeholder="Date*" required>
+              <input class="clear_field" type="number" name="cardio_duration" placeholder="Duration in minutes" value=' '>
+              <input class="clear_field" type="number" name="cardio_distance" placeholder="Distance in miles" value=' '>
+              <input class="clear_field" type="text" name="cardio_notes" placeholder="Notes" value=' '>
+              <input class="btn btn-md" type="submit" name="submit" value="Add a workout!">
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 <div id="workout-information-body">
-      <form id="create-workout">
-        <fieldset>
-          <legend>Add a new workout!</legend>
-          <input class="clear_field" type="text" name="cardio_desc" placeholder="What did you do?*" required>
-          <input class="clear_field" type="date" name="cardio_date" placeholder="Date*" required>
-          <input class="clear_field" type="number" name="cardio_duration" placeholder="Duration in minutes">
-          <input class="clear_field" type="number" name="cardio_distance" placeholder="Distance in miles">
-          <input class="clear_field" type="text" name="cardio_notes" placeholder="Notes">
-          <input type="submit" name="submit" value="Add a workout!">
-        </fieldset>
-      </form>
-    <br><br>
-    <div id="all-workouts">
-      <form id="see-workouts">
-        <fieldset>
-          <legend>View all of your workouts</legend>
-          <input id="see-workouts-button" type="submit" name="submit" value="View your workouts!">
-        </fieldset>
-      </form>
-    <br><br>
-      <div id="view-workouts">
+
+
+  <!-- Button trigger modal -->
+  <button id="seeWorkoutsButton" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mySeeWorkoutsModal">
+    View all of your workouts
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="mySeeWorkoutsModal" tabindex="-1" role="dialog" aria-labelledby="mySeeWorkoutsModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="mySeeWorkoutsModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <br><br>
+          <div id="all-workouts">
+            <form id="see-workouts">
+              <fieldset>
+                <legend>View all of your workouts</legend>
+                <input id="see-workouts-button" type="submit" name="submit" value="View your workouts!">
+              </fieldset>
+            </form>
+          <br><br>
+            <div id="view-workouts">
+            </div>
+          </div>
+          <br><br>
+        </div>
+        <div class="modal-footer">
+        </div>
       </div>
     </div>
-    <br><br>
-    <div id="some-workouts">
-      <form id="find-workout">
-        <fieldset>
-          <legend>Find an old workout</legend>
-          <input id="date-to-find" type="date" name="cardio_date" placeholder="Pick a date">
-          <input id="find-workout-button" type="submit" name="submit" value="Find a workout!">
-        </fieldset>
-      </form>
-      <div id="see-workouts-by-date">
+  </div>
+<br>
+
+  <!-- Button trigger modal -->
+  <button id="viewWorkoutsDateButton" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myViewWorkoutsDateModal">
+    View your workouts on a certain date
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myViewWorkoutsDateModal" tabindex="-1" role="dialog" aria-labelledby="myViewWorkoutsDateModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myViewWorkoutsDateModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <div id="some-workouts">
+            <form id="find-workout">
+              <fieldset>
+                <legend>Find an old workout</legend>
+                <input id="date-to-find" type="date" name="cardio_date" placeholder="Pick a date">
+                <input id="find-workout-button" type="submit" name="submit" value="Find a workout!">
+              </fieldset>
+            </form>
+            <div id="see-workouts-by-date">
+            </div>
+          </div>
+          <br><br>
+        </div>
+        <div class="modal-footer">
+      </div>
       </div>
     </div>
-    <br><br>
+  </div>
+
     <!-- <div class="content">
       <form id="show-profile">
         <fieldset>

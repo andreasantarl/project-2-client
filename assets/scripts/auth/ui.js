@@ -6,6 +6,7 @@ const app = require('../app.js');
 $("#sign-out").hide();
 $("#changePasswordModalbutton").hide();
 $("#profileModalbutton").hide();
+$("#myNewWorkoutButton").hide();
 $("#workout-information-body").hide();
 
 const success = (data) => {
@@ -38,6 +39,7 @@ const signInSuccess = (data) => {
   $("#sign-out").show();
   $("#changePasswordModalbutton").show();
   $("#profileModalbutton").show();
+  $("#myNewWorkoutButton").show();
   $("#workout-information-body").show();
 };
 
@@ -48,6 +50,7 @@ const signOutSuccess = () => {
   $("#changePasswordModalbutton").hide();
   $("#profileModalbutton").hide();
   $("#workout-information-body").hide();
+  $("#myNewWorkoutButton").hide();
   $(".login-info").val('');
   $(".sign-up-info").val('');
   $('.ty-msg').remove();

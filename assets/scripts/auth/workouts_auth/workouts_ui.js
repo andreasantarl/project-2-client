@@ -58,67 +58,8 @@ const onEditWorkout = (event) => {
     .fail();
 };
 
-// $('#see-workouts-button').on('click', function (event) {
-//         $(this).addClass('Clicked');
-//       });
-//
-// $('#find-workout-button').on('click', function (event) {
-//   event.preventDefault();
-//         $(this).addClass('Clicked');
-//       });
-
-// const findWorkoutByDate = (data) => {
-//   let date = $('#date-to-find').val();
-// console.log("workout date data:", date, data);
-// let workoutInfo = '<br>';
-//  for (let i = 0; i < data.workouts.length; i++) {
-//    let workout = data.workouts[i];
-//       let workoutDate = data.workouts[i].cardio_date;
-//       console.log("workout date: ", workoutDate);
-//       console.log("date passed:", date);
-//       if (date === workoutDate) {
-//         workoutInfo += "<input class='delete-workout' id='" + i + "' type='submit' name='submit' value='Delete workout'><br>Date: " + workout.cardio_date + "<br>";
-//           workoutInfo += "Description: " + workout.cardio_desc + "<br>";
-//           if (workout.cardio_duration !== '' && workout.cardio_duration !== null) {
-//            workoutInfo += "Duration: " + workout.cardio_duration + "<br>";
-//          }
-//           if (workout.cardio_distance !== '' && workout.cardio_distance !== null) {
-//             workoutInfo += "Distance: " + workout.cardio_distance + "<br>";
-//           }
-//           if (workout.cardio_notes !== '' && workout.cardio_notes !== null) {
-//             workoutInfo += "Notes: " + workout.cardio_notes + "<br>";
-//           }
-//           workoutInfo += "<br>";
-//          }
-//          if(workoutInfo === '<br>') {
-//          workoutInfo += "Please choose a date with a workout";
-//          }
-//        }
-//        return workoutInfo;
-// };
-
 const seeWorkoutsSuccess = (data) => {
   app.user.workouts = data.workouts;
-//   $('#see-workouts-button').on('click', function (event) {
-//         //  $(this).addClass('Clicked');
-//           $('#view-workouts').html('');
-//            $('#view-workouts').html(workoutTemplate(app.user));
-//            $('.delete-workout').on('click', onDeleteWorkout);
-//            $('.workout-display').on('submit', onEditWorkout);
-//         });
-//
-//   // $('#find-workout').on('click', function (event) {
-//   //   debugger;
-//   //   //  event.preventDefault();
-//   //         $("#find-workout-button").addClass('Clicked');
-//   //         let date = $('#date-to-find').val();
-//   //         findWorkoutByDate(date, data);
-//   //        });
-//   $("#find-workout-button").on('click', findWorkoutByDate);
-// //   if ($('#find-workout-button').hasClass('clicked')) {
-// //
-// //if (("#see-workouts-button").hasClass('Clicked'))
-// // {
  $('#view-workouts').html('');
   $('#view-workouts').html(workoutTemplate(app.user));
   $('.delete-workout').on('click', onDeleteWorkout);
