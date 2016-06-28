@@ -45,8 +45,8 @@ const signOutSuccess = () => {
   console.log('User signed out successfully');
   app.user = null;
   $("#sign-out").hide();
-  $("#changePasswordModal").hide();
-  $("#profileModalbuttonbutton").hide();
+  $("#changePasswordModalbutton").hide();
+  $("#profileModalbutton").hide();
   $("#workout-information-body").hide();
   $(".login-info").val('');
   $(".sign-up-info").val('');
@@ -54,7 +54,7 @@ const signOutSuccess = () => {
 };
 const changePasswordSuccess = () => {
   $("#changePasswordModal").modal("hide");
-  $(".class='password-info").val("");
+  $(".password-info").val("");
 };
 
 const changePasswordFailure = (error) => {
