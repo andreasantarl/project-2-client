@@ -30,7 +30,6 @@ const onUpdateProfile = (event) => {
   let user_id = app.user.id;
   $('#update-profile').find('[name=user_id]').val(user_id);
   let data = getFormFields(event.target);
-  debugger;
   api.updateProfile(data)
   .done(ui.profileUpdateSuccess)
   .fail(ui.profileUpdateFailure);

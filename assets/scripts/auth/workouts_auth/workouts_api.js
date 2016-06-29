@@ -59,6 +59,9 @@ const editWorkout = (data) => {
 };
 
 const workoutsByDate = (data) => {
+  //data.user_id = app.user.id;
+  console.log("Workouts by date data:", data);
+
   return $.ajax({
     url: app.host + '/workouts/find/' + data,
     method: 'GET',

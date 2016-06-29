@@ -41,6 +41,10 @@ const signInSuccess = (data) => {
   $("#profileModalbutton").show();
   $("#myNewWorkoutButton").show();
   $("#workout-information-body").show();
+  $("#workout-information-body").show();
+  $("#signUpSignIn").hide();
+
+
 };
 
 const signOutSuccess = () => {
@@ -54,6 +58,7 @@ const signOutSuccess = () => {
   $(".login-info").val('');
   $(".sign-up-info").val('');
   $('.ty-msg').remove();
+  $("#signUpSignIn").show();
 };
 const changePasswordSuccess = () => {
   $("#changePasswordModal").modal("hide");

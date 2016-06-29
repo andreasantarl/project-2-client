@@ -71,7 +71,9 @@ const seeWorkoutsFailure = (error) => {
 };
 
 const findWorkoutDateSuccess = (data) => {
-  console.log(data);
+  //  let workouts = data.user_id;
+  //console.log(workouts);
+
   $('#see-workouts-by-date').html('');
    $('#see-workouts-by-date').html(workoutTemplate(data));
    $('.delete-workout').on('click', onDeleteWorkout);

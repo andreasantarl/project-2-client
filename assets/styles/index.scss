@@ -3,7 +3,119 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 body {
   // background: url("~/img/Barbell.jpg") no-repeat;
-  background: url("~/img/5060277.jpg") no-repeat;
-  background-size: 50%;
+  background: url("~/img/Arm-exercises-for-women.jpg") no-repeat;
+  background-size: 25%;
+  background-position: bottom left;
+  background-attachment: fixed;
+}
 
+// 20px gutter
+.gutter-20.row {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+// 10px gutter
+.gutter-10.row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+// 0px gutter
+.gutter-0.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"]{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+
+.modalButtons {
+  text-align: center;
+  margin: 100px auto;
+}
+
+#signUpSignIn {
+  padding: 15px;
+  font-size: 40px;
+}
+// .navButton {
+//   margin: 0 1%;
+//   width: 180px;
+//   height: 40%;
+// }
+
+.modal-body {
+  text-align: left;
+}
+//
+.rightNav {
+
+}
+//
+.rightNavButton {
+  display: inline-block;
+  float:right;
+  position: relative;
+  margin: 0;
+  padding: 5px 0;
+  width: 150px;
+  font-size: 16px;
+  text-align: center;
+  //right: 16px;
+  top: -175px;
+
+}
+//
+// .newWorkoutButton {
+//   float: center;
+// }
+
+.row-centered {
+    text-align:center;
+    margin: 30px;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:center;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.centerButtons {
+  font-size: 30px;
+  padding: 20px 15px;
+  position: relative;
+  top: -120px;
+}
+
+.form-group {
+  margin: 10px 20px;
+}
+
+h4 {
+  text-align:center;
+}
+
+.modal-title {
+  font-size: 24px;
+}
+
+.workoutEditDeleteButtons {
+  margin: 10px;
 }
