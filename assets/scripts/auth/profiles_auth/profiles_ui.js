@@ -2,11 +2,11 @@
 
 const profileTemplate = require('../../templates/profile.handlebars');
 
-//const app = require('../../app.js');
+const app = require('../../app.js');
 
-const profileSuccess = () => {
+const profileSuccess = (data) => {
   console.log('Profile created!');
-//  app.user = data.user;
+  app.user.profile = data.profile;
 };
 
 const profileFailure = (error) => {

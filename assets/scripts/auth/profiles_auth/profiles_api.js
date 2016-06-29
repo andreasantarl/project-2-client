@@ -2,9 +2,8 @@
 
 const app = require('../../app.js');
 
-const setProfile = (data) => {
-  data.user_id= app.user.id;
-//  console.log("SetProfiles Ajax data  ", data);
+const setProfile = (first_name,last_name) => {
+console.log(app);
   return $.ajax({
     url: app.host + '/profiles',
     method: "POST",
@@ -12,14 +11,19 @@ const setProfile = (data) => {
       Authorization: 'Token token=' + app.user.token,
     },
     data: {
-      'profile': data
-    }
+            "profile": {
+                "user_id": app.user.id,
+                 "first_name": first_name,
+                 "last_name": last_name,
+            }
+          },
   });
 };
 
 const showProfile = (profile_id) => {
+  console.log(app);
   return $.ajax({
-    url: app.host + '/profiles/' + profile_id,
+    url: app.host + '/profiles/' + app.user.profile.id,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token,
