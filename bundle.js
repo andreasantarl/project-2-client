@@ -322,25 +322,19 @@ webpackJsonp([0],[
 
 	var onCreateProfile = function onCreateProfile(event) {
 	  event.preventDefault();
-	  var user_id = app.user.id;
-	  $('#create-profile').find('[name=user_id]').val(user_id);
 	  var data = getFormFields(event.target);
-	  api.setProfile(data).done(ui.profileSuccess).fail(ui.profileFailure);
+	  api.setProfile(data.profile.first_name, data.profile.last_name).done(ui.profileSuccess).fail(ui.profileFailure);
 	};
 
 	var onShowProfile = function onShowProfile(event) {
 	  event.preventDefault();
-	  var profile_id = app.user.profile.id;
-	  $('#show-profile').data('id', profile_id);
-	  api.showProfile(profile_id).done(ui.showProfileSuccess).fail(ui.profileShowFailure);
+	  api.showProfile().done(ui.showProfileSuccess).fail(ui.profileShowFailure);
 	};
 
 	var onUpdateProfile = function onUpdateProfile(event) {
 	  event.preventDefault();
-	  var user_id = app.user.id;
-	  $('#update-profile').find('[name=user_id]').val(user_id);
 	  var data = getFormFields(event.target);
-	  api.updateProfile(data).done(ui.profileUpdateSuccess).fail(ui.profileUpdateFailure);
+	  api.setProfile(data.profile.first_name, data.profile.last_name).done(ui.profileSuccess).fail(ui.profileFailure);
 	};
 
 	var addHandlers = function addHandlers() {
@@ -362,9 +356,8 @@ webpackJsonp([0],[
 
 	var app = __webpack_require__(6);
 
-	var setProfile = function setProfile(data) {
-	  data.user_id = app.user.id;
-	  //  console.log("SetProfiles Ajax data  ", data);
+	var setProfile = function setProfile(first_name, last_name) {
+	  console.log(app);
 	  return $.ajax({
 	    url: app.host + '/profiles',
 	    method: "POST",
@@ -372,14 +365,19 @@ webpackJsonp([0],[
 	      Authorization: 'Token token=' + app.user.token
 	    },
 	    data: {
-	      'profile': data
+	      "profile": {
+	        "user_id": app.user.id,
+	        "first_name": first_name,
+	        "last_name": last_name
+	      }
 	    }
 	  });
 	};
 
 	var showProfile = function showProfile(profile_id) {
+	  console.log(app);
 	  return $.ajax({
-	    url: app.host + '/profiles/' + profile_id,
+	    url: app.host + '/profiles/' + app.user.profile.id,
 	    method: 'GET',
 	    headers: {
 	      Authorization: 'Token token=' + app.user.token
@@ -417,11 +415,11 @@ webpackJsonp([0],[
 
 	var profileTemplate = __webpack_require__(11);
 
-	//const app = require('../../app.js');
+	var app = __webpack_require__(6);
 
-	var profileSuccess = function profileSuccess() {
+	var profileSuccess = function profileSuccess(data) {
 	  console.log('Profile created!');
-	  //  app.user = data.user;
+	  app.user.profile = data.profile;
 	};
 
 	var profileFailure = function profileFailure(error) {
