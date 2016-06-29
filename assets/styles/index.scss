@@ -9,43 +9,13 @@ body {
   background-attachment: fixed;
 }
 
-// 20px gutter
-.gutter-20.row {
-  margin-right: -10px;
-  margin-left: -10px;
-}
-
-.gutter-20 > [class^="col-"], .gutter-20 > [class^=" col-"] {
-  padding-right: 10px;
-  padding-left: 10px;
-}
-// 10px gutter
-.gutter-10.row {
-  margin-right: -5px;
-  margin-left: -5px;
-}
-
-.gutter-10 > [class^="col-"], .gutter-10 > [class^=" col-"] {
-  padding-right: 5px;
-  padding-left: 5px;
-}
-
-// 0px gutter
-.gutter-0.row {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.gutter-0 > [class^="col-"], .gutter-0 > [class^=" col-"]{
-  padding-right: 0;
-  padding-left: 0;
-}
 
 
 .modalButtons {
   text-align: center;
   margin: 100px auto;
 }
+
 
 #signUpSignIn {
   padding: 15px;
@@ -61,20 +31,15 @@ body {
   text-align: left;
 }
 //
-.rightNav {
-
-}
 //
 .rightNavButton {
   display: inline-block;
-  float:right;
   position: relative;
-  margin: 0;
+  float:right;
   padding: 5px 0;
   width: 150px;
   font-size: 16px;
   text-align: center;
-  //right: 16px;
   top: -175px;
 
 }
@@ -91,9 +56,7 @@ body {
 .col-centered {
     display:inline-block;
     float:none;
-    /* reset the text-align */
     text-align:center;
-    /* inline-block space fix */
     margin-right:-4px;
 }
 
@@ -109,7 +72,7 @@ body {
 }
 
 h4 {
-  text-align:center;
+  text-align: center;
 }
 
 .modal-title {
@@ -118,4 +81,16 @@ h4 {
 
 .workoutEditDeleteButtons {
   margin: 10px;
+}
+
+
+.gutter-5.row {
+  margin-right: -5px;
+  margin-left: -5px;
+}
+
+.gutter-5 > [class^="col-"],
+.gutter-5 > [class^=" col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
 }
