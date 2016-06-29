@@ -218,10 +218,10 @@ webpackJsonp([0],[
 	'use strict';
 
 	var app = {
-	  host: 'http://localhost:3000'
+	  //host: 'http://localhost:3000',
+	  host: 'https://andrea-workout-tracker.herokuapp.com'
 	};
 
-	//host: 'https://andrea-workout-tracker.herokuapp.com',
 	module.exports = app;
 
 /***/ },
