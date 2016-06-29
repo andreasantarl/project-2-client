@@ -57,9 +57,6 @@ const addHandlers = () => {
   $('#create-workout').on('submit', onCreateWorkout);
   $('#see-workouts').on('submit', onSeeWorkouts);//.on('click', addClassClicked);
   $('#find-workout').on('submit', onWorkoutsByDate);
-  $(".modal").on("hidden.bs.modal", function() {
-    $(".modal-body").html("");
-});
 
 };
 
