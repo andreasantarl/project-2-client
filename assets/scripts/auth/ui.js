@@ -12,9 +12,9 @@ $("#workout-information-body").hide();
 const success = (data) => {
 //  app.user = data.user; //
   if (data) {
-    console.log(data);
+//    console.log(data);
   } else {
-    console.log('Success');
+//    console.log('Success');
   }
   $('#sign-up-message').text("Thank you for creating an account!  Please now sign in.");
 };
@@ -48,7 +48,7 @@ const signInSuccess = (data) => {
 };
 
 const signOutSuccess = () => {
-  console.log('User signed out successfully');
+//  console.log('User signed out successfully');
   app.user = null;
   $("#sign-out").hide();
   $("#changePasswordModalbutton").hide();

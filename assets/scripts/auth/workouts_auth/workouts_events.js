@@ -47,7 +47,7 @@ const onWorkoutsByDate = (event) => {
   event.preventDefault();
   let data = $("#date-to-find").val();
   // data.workouts.user_id = app.user.id;
-  console.log("Date", data);
+//  console.log("Date", data);
   api.workoutsByDate(data)
   .done(ui.findWorkoutDateSuccess)
   .fail(ui.findWorkoutDateFailure);
