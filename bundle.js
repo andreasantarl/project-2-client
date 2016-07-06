@@ -242,10 +242,10 @@ webpackJsonp([0],[
 	var success = function success(data) {
 	  //  app.user = data.user; //
 	  if (data) {
-	    console.log(data);
+	    //    console.log(data);
 	  } else {
-	    console.log('Success');
-	  }
+	      //    console.log('Success');
+	    }
 	  $('#sign-up-message').text("Thank you for creating an account!  Please now sign in.");
 	};
 
@@ -274,7 +274,7 @@ webpackJsonp([0],[
 	};
 
 	var signOutSuccess = function signOutSuccess() {
-	  console.log('User signed out successfully');
+	  //  console.log('User signed out successfully');
 	  app.user = null;
 	  $("#sign-out").hide();
 	  $("#changePasswordModalbutton").hide();
@@ -357,7 +357,7 @@ webpackJsonp([0],[
 	var app = __webpack_require__(6);
 
 	var setProfile = function setProfile(first_name, last_name) {
-	  console.log(app);
+	  //console.log(app);
 	  return $.ajax({
 	    url: app.host + '/profiles',
 	    method: "POST",
@@ -375,7 +375,7 @@ webpackJsonp([0],[
 	};
 
 	var showProfile = function showProfile(profile_id) {
-	  console.log(app);
+	  //  console.log(app);
 	  return $.ajax({
 	    url: app.host + '/profiles/' + app.user.profile.id,
 	    method: 'GET',
@@ -387,7 +387,7 @@ webpackJsonp([0],[
 
 	var updateProfile = function updateProfile(data) {
 	  data.user_id = app.user.user_id;
-	  console.log("UpdateProfile Ajax data  ", data);
+	  //  console.log("UpdateProfile Ajax data  ", data);
 	  return $.ajax({
 	    url: app.host + '/profiles/' + app.user.profile.id,
 	    method: "PATCH",
@@ -418,7 +418,7 @@ webpackJsonp([0],[
 	var app = __webpack_require__(6);
 
 	var profileSuccess = function profileSuccess(data) {
-	  console.log('Profile created!');
+	  //  console.log('Profile created!');
 	  app.user.profile = data.profile;
 	};
 
@@ -427,7 +427,7 @@ webpackJsonp([0],[
 	};
 
 	var profileUpdateSuccess = function profileUpdateSuccess(data) {
-	  console.log('Profile data:', data);
+	  //  console.log('Profile data:', data);
 	  //app.user = data.user; //
 
 	  //  app.user = data.user;
@@ -440,7 +440,7 @@ webpackJsonp([0],[
 	var showProfileSuccess = function showProfileSuccess(data) {
 	  //  let profileId = data.user_id;
 	  //app.user = data.user; //
-	  console.log("Show profile data:", data);
+	  //  console.log("Show profile data:", data);
 	  // //let profile_user = profile.user_id;
 
 	  //$("#view-profile").html(profileTemplate(data));
@@ -1696,7 +1696,7 @@ webpackJsonp([0],[
 	  event.preventDefault();
 	  var data = $("#date-to-find").val();
 	  // data.workouts.user_id = app.user.id;
-	  console.log("Date", data);
+	  //  console.log("Date", data);
 	  api.workoutsByDate(data).done(ui.findWorkoutDateSuccess).fail(ui.findWorkoutDateFailure);
 	};
 
@@ -1766,7 +1766,7 @@ webpackJsonp([0],[
 	};
 
 	var editWorkout = function editWorkout(data) {
-	  console.log("UpdateWorkout Ajax data  ", data);
+	  //  console.log("UpdateWorkout Ajax data  ", data);
 	  return $.ajax({
 	    url: app.host + '/workouts/' + data.workout.id,
 	    method: "PATCH",
@@ -1779,7 +1779,7 @@ webpackJsonp([0],[
 
 	var workoutsByDate = function workoutsByDate(data) {
 	  //data.user_id = app.user.id;
-	  console.log("Workouts by date data:", data);
+	  //  console.log("Workouts by date data:", data);
 
 	  return $.ajax({
 	    url: app.host + '/workouts/find/' + data,
@@ -1812,7 +1812,7 @@ webpackJsonp([0],[
 
 	var createWorkoutSuccess = function createWorkoutSuccess(data) {
 	  $('.clear_field').val('');
-	  console.log("CreateWorkout data: ", data);
+	  //  console.log("CreateWorkout data: ", data);
 	};
 
 	var createWorkoutFailure = function createWorkoutFailure(error) {
@@ -1832,7 +1832,7 @@ webpackJsonp([0],[
 	};
 
 	var deleteWorkoutSuccess = function deleteWorkoutSuccess() {
-	  console.log("Dete Workout Success appuser", app.user);
+	  //  console.log("Dete Workout Success appuser", app.user);
 	  $("#see-workouts-button").click();
 	};
 
