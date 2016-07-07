@@ -24,8 +24,9 @@ const onShowProfile = (event) => {
 const onUpdateProfile = (event) => {
   event.preventDefault();
   let data = getFormFields(event.target);
-  api.setProfile(data.profile.first_name, data.profile.last_name)
-  .done(ui.profileSuccess)
+ api.updateProfile(data.profile.first_name, data.profile.last_name)
+//api.updateProfile(data)
+  .done(ui.profileUpdateSuccess)
   .fail(ui.profileFailure);
 };
 

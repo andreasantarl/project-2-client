@@ -31,8 +31,10 @@ const showProfile = (profile_id) => {
   });
 };
 
-const updateProfile = (data) => {
-  data.user_id = app.user.user_id;
+const updateProfile = (first, last) => {
+  //data.user_id = app.user.user_id;
+  console.log(app);
+  //console.log(data);
 //  console.log("UpdateProfile Ajax data  ", data);
   return $.ajax({
     url: app.host + '/profiles/' + app.user.profile.id,
@@ -41,8 +43,11 @@ const updateProfile = (data) => {
       Authorization: 'Token token=' + app.user.token,
     },
     data: {
-      'profile': data
-    }
+            "profile": {
+                 "first_name": first,
+                 "last_name": last,
+            }
+          },
   });
 };
 

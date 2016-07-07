@@ -334,7 +334,9 @@ webpackJsonp([0],[
 	var onUpdateProfile = function onUpdateProfile(event) {
 	  event.preventDefault();
 	  var data = getFormFields(event.target);
-	  api.setProfile(data.profile.first_name, data.profile.last_name).done(ui.profileSuccess).fail(ui.profileFailure);
+	  api.updateProfile(data.profile.first_name, data.profile.last_name)
+	  //api.updateProfile(data)
+	  .done(ui.profileUpdateSuccess).fail(ui.profileFailure);
 	};
 
 	var addHandlers = function addHandlers() {
@@ -385,8 +387,10 @@ webpackJsonp([0],[
 	  });
 	};
 
-	var updateProfile = function updateProfile(data) {
-	  data.user_id = app.user.user_id;
+	var updateProfile = function updateProfile(first, last) {
+	  //data.user_id = app.user.user_id;
+	  console.log(app);
+	  //console.log(data);
 	  //  console.log("UpdateProfile Ajax data  ", data);
 	  return $.ajax({
 	    url: app.host + '/profiles/' + app.user.profile.id,
@@ -395,7 +399,10 @@ webpackJsonp([0],[
 	      Authorization: 'Token token=' + app.user.token
 	    },
 	    data: {
-	      'profile': data
+	      "profile": {
+	        "first_name": first,
+	        "last_name": last
+	      }
 	    }
 	  });
 	};
