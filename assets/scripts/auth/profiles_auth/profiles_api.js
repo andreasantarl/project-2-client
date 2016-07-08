@@ -3,7 +3,7 @@
 const app = require('../../app.js');
 
 const setProfile = (first_name,last_name) => {
-console.log(app);
+//console.log(app);
   return $.ajax({
     url: app.host + '/profiles',
     method: "POST",
@@ -21,7 +21,7 @@ console.log(app);
 };
 
 const showProfile = (profile_id) => {
-  console.log(app);
+//  console.log(app);
   return $.ajax({
     url: app.host + '/profiles/' + app.user.profile.id,
     method: 'GET',
@@ -31,9 +31,11 @@ const showProfile = (profile_id) => {
   });
 };
 
-const updateProfile = (data) => {
-  data.user_id = app.user.user_id;
-  console.log("UpdateProfile Ajax data  ", data);
+const updateProfile = (first, last) => {
+  //data.user_id = app.user.user_id;
+  console.log(app);
+  //console.log(data);
+//  console.log("UpdateProfile Ajax data  ", data);
   return $.ajax({
     url: app.host + '/profiles/' + app.user.profile.id,
     method: "PATCH",
@@ -41,8 +43,11 @@ const updateProfile = (data) => {
       Authorization: 'Token token=' + app.user.token,
     },
     data: {
-      'profile': data
-    }
+            "profile": {
+                 "first_name": first,
+                 "last_name": last,
+            }
+          },
   });
 };
 

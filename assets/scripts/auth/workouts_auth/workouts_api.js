@@ -47,7 +47,7 @@ const deleteWorkout = (buttonId) => {
 };
 
 const editWorkout = (data) => {
-  console.log("UpdateWorkout Ajax data  ", data);
+//  console.log("UpdateWorkout Ajax data  ", data);
   return $.ajax({
     url: app.host + '/workouts/' + data.workout.id,
     method: "PATCH",
@@ -60,7 +60,7 @@ const editWorkout = (data) => {
 
 const workoutsByDate = (data) => {
   //data.user_id = app.user.id;
-  console.log("Workouts by date data:", data);
+//  console.log("Workouts by date data:", data);
 
   return $.ajax({
     url: app.host + '/workouts/find/' + data,

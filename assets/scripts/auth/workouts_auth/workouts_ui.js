@@ -7,7 +7,7 @@ const getFormFields = require('../../../../lib/get-form-fields');
 
 const createWorkoutSuccess = (data) => {
   $('.clear_field').val('');
-  console.log("CreateWorkout data: ", data);
+//  console.log("CreateWorkout data: ", data);
 };
 
 const createWorkoutFailure = (error) => {
@@ -27,7 +27,7 @@ const editWorkoutSuccess = () => {
 };
 
 const deleteWorkoutSuccess = () => {
-  console.log("Dete Workout Success appuser", app.user);
+//  console.log("Dete Workout Success appuser", app.user);
   $("#see-workouts-button").click();
 };
 

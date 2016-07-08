@@ -3,13 +3,16 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 body {
   // background: url("~/img/Barbell.jpg") no-repeat;
-  background: image-url("~/img/Arm-exercises-for-women.jpg") no-repeat;
+  background: url("../../Arm-exercises-for-women.jpg") no-repeat;
   background-size: 25%;
   background-position: bottom left;
   background-attachment: fixed;
 }
 
-
+h1 {
+  font-size: 40px;
+  margin: 20px 30px;
+}
 
 .modalButtons {
   text-align: center;
@@ -40,7 +43,7 @@ body {
   width: 150px;
   font-size: 16px;
   text-align: center;
-  top: -175px;
+  top: -255px;
 
 }
 //
