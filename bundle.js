@@ -1944,17 +1944,17 @@ webpackJsonp([0],[
 
 	  return "\n<h4>"
 	    + alias4(((helper = (helper = helpers.cardio_date || (depth0 != null ? depth0.cardio_date : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cardio_date","hash":{},"data":data}) : helper)))
-	    + "</h4>\n<div>\n  <input class=\"form-control\" type=\"hidden\" name=workout[cardio_date] placeholder=\"Cardio Date\"value="
+	    + "</h4>\n<div>\n  <input class=\"form-control\" type=\"hidden\" name=workout[cardio_date] placeholder=\"Cardio Date\"value=\""
 	    + alias4(((helper = (helper = helpers.cardio_date || (depth0 != null ? depth0.cardio_date : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cardio_date","hash":{},"data":data}) : helper)))
-	    + ">\n</div>\n<div>\n  Workout Description: <input class=\"form-control\" type=\"text\" name=workout[cardio_desc] placeholder=\"Description of Workout\" value="
+	    + "\">\n</div>\n<div>\n  Workout Description: <input class=\"form-control\" type=\"text\" name=workout[cardio_desc] placeholder=\"Description of Workout\" value=\""
 	    + alias4(((helper = (helper = helpers.cardio_desc || (depth0 != null ? depth0.cardio_desc : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cardio_desc","hash":{},"data":data}) : helper)))
-	    + " />\n</div>\n<div>\n  Workout Duration: <input class=\"form-control\" type=\"number\" name=workout[cardio_duration] value="
+	    + "\" />\n</div>\n<div>\n  Workout Duration: <input class=\"form-control\" type=\"number\" name=workout[cardio_duration] value=\""
 	    + alias4(((helper = (helper = helpers.cardio_duration || (depth0 != null ? depth0.cardio_duration : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cardio_duration","hash":{},"data":data}) : helper)))
-	    + ">\n</div>\n<div>\n  Workout Distance: <input class=\"form-control\" type=\"number\" name=workout[cardio_distance] value="
+	    + "\">\n</div>\n<div>\n  Workout Distance: <input class=\"form-control\" type=\"number\" name=workout[cardio_distance] value=\""
 	    + alias4(((helper = (helper = helpers.cardio_distance || (depth0 != null ? depth0.cardio_distance : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cardio_distance","hash":{},"data":data}) : helper)))
-	    + ">\n</div>\n<div>\n  Workout Notes: <input class=\"form-control\" type=\"text\" name=workout[cardio_notes] value="
+	    + "\">\n</div>\n<div>\n  Workout Notes: <input class=\"form-control\" type=\"text\" name=workout[cardio_notes] value=\""
 	    + alias4(((helper = (helper = helpers.cardio_notes || (depth0 != null ? depth0.cardio_notes : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"cardio_notes","hash":{},"data":data}) : helper)))
-	    + ">\n</div>\n";
+	    + "\">\n</div>\n";
 	},"useData":true});
 
 /***/ },
